@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: agamsidhupipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agamsidhupipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: agamsidhupipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: agamsidhupipelinesjavascriptdocker 
+          image: acontainerregcontus.azurecr.io/agamsidhupipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
